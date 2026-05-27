@@ -6,6 +6,9 @@
   "css": {
     "default": {"url": "default.css"}
   },
+  "applications": {
+    "url": "apps/list.json"
+  },
   "lib-js": {
     "buttonSignIn": {
       "css": "lib-js/buttonSignIn.css",

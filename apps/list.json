@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-05-27.1",
+  "apps": [
+    {
+      "id": "bridge-mira",
+      "name": "Mira",
+      "description": {
+        "en": "Fertility Tracker",
+        "fr": "Tracker de fertilité"
+      },
+      "icon": {
+        "type": "base64",
+        "value": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEU/wV////8+wV41v1guvlT3/fhizHzI7NDM7dOj37Hj9udBw2Lo9+w5wFsyvlb6/vtKxWldyndQxm1WyHKy5b7a8uDV8dzC6stvz4a558MpvVDx+/Se3q2N2J591JJ30YxqzoKR2qKE1Jao4LSy5L2g36+Y3ah805DTzoNDAAAExklEQVR4nO3c2XraMBAFYJDMakZ4YTdLwIS8/xsW0rQxCZ4ZxTLtxfkv+vVmiI8ljWXRtNMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgB8yRGT/uP7deJZX62/lnvUtM2SdSVen43Y0W8/K7fF0SGNn1Slv0ZJb/ahcr8+jy3G/SsmjvmXGRfF+NJxMu1XTyaI8ZZEjsZ6cS4/rcXFf35sMXg8msv88pLGbbDS/v7iK8TndsBdJbvOyLurKp4ttwte3jVxyGddd3odJmdUOJNn83BPq57tYMRHaQa6/lq7v3fLl4TUauxpqyosyd/9iHE2U6vJdTQf96HtGOivLu71ZFj07o7HZrHb1Pcq4TL+NAx309b0yfu56JNrWtoe6axzFX4fRLj3qJzt63nI0tr/wzHczX30ZRsq10/zdILPPCuiOXlf21/T1S0S79aov9s/pOGR8Jte9QXI304yVnjVflM/Y5lD2kxn6xzy9m2m08qxfflvM4QPm8wYBrw2jfxdxM/CsHyYtR6TMc15907uLSJnvkl60G7F5wGvEl2pE59dsruZtRqSk2RT9rUgrl2g63vdskbTWbgyp9pGiSbVdWI+dzYdBax01WgcJeB2F6iVG/g+fWdRSwEuggN3uubLJNIn//uHo2ghIfZ+ttuBU6TbO/871+i10G2Oat9FPRfZ5iabj37/mLSxFp36bU1lW5pn3zuaqDD5PqR80YLe7r8xT69/CpmnoeRo12Y0+Mo4/5xllvm+b1+1b4H76k4kkuDRrNt2XoIOofM0pxovhYLgYq0ZkUtmaGPMxRaZF0VO27HnQl0XaK674/JYnZCNHcbYqFXekOoi3OTJeXg5pnuX9w2U5UUQ8hBxEK67C+Sm2ZN6/bbj+SS4+iO9FY6oO4m7VuX1hcSsma5OTvO6HAdspvQg/rDjZL0dh15Ar6TG3rw7C/Xc5xrqVlDFkO7XCs3Dw8KiPaMaX8e2Qop2wnSuDnUyZmG8do7o1705s15jmfK9wKb+aJ51QvUY4ur3Un0c7/iFzEQaBYn6mBntgOPb9ZrvhSt+40oX01Ca+xa0D9RpjuN695q+SPaUoMmmaUcL97HGg/Tel3A8RjhSM40bhTZxmlp0E4h3SsdyW6iT1M8qZ6rM8zdhdufjTlQmZZbiQ5wl3SrGQr5ByppGvgyQ0hnlyK24iN8mLWJ5mjnmqKm6wJiFzjjKJFfWWuUOKhcS9mWrukIw7nxEa6W9cO10pnmjMHZL2DDrEdDPVSud2tTvFB7iyvj7IM9/u6m+h6sjLMM+0V8Uzm7vF+yAJ6ydZoTpf516fFY8Ldplo5oDIjmo/X7n1Zc54loqFbJhTHGlnq8IkVO6aovqvOwaahMws3/4nCetf9zUnZiauTzhCQg0klCGhAAkbQ0IZEgqQsDEklCGhAAkbQ0IZEgqQsDEklCGhAAkbQ0IZEgqQsDEklCGhAAkbQ0IZEgqQsDEklCGhAAkbQ0IZEgqQsDEklCGhAAkbQ0IZEgqQsDH7Ou09NlX+3w3RsvYTVP8KOh7X1gf5V9Am69dJdb/PYfLaT9D9RkhaWx/ol9eojvbjTcNPaFoPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABP9QuXCGW4PbcCmAAAAABJRU5ErkJggg=="
+      },
+      "category": "medical",
+      "provider": "Quanovate Inc.",
+      "hook": {
+        "initiate": {
+          "method": "POST",
+          "url": "https://bridge-mira.datasafe.dev/mira/initiate",
+          "auth": "ApiEndpoint ${apiEndpoint}",
+          "body": {
+            "returnUrl": "${returnUrl}"
+          },
+          "openUrlField": "openUrl"
+        },
+        "open": {
+          "url": "${openUrl}",
+          "embed": false
+        },
+        "resync": {
+          "initiate": {
+            "method": "POST",
+            "url": "https://bridge-mira.datasafe.dev/mira/resync",
+            "auth": "ApiEndpoint ${apiEndpoint}"
+          },
+          "url": "${openUrl}",
+          "embed": false
+        },
+        "disconnect": {
+          "method": "POST",
+          "url": "https://bridge-mira.datasafe.dev/mira/revoke",
+          "auth": "ApiEndpoint ${apiEndpoint}"
+        }
+      },
+      "lastSync": {
+        "type": "api",
+        "url": "https://bridge-mira.datasafe.dev/mira/lastSync",
+        "auth": "ApiEndpoint ${apiEndpoint}",
+        "field": "lastSyncedAt"
+      }
+    },
+    {
+      "id": "bridge-cyclefeminin",
+      "name": "cyclefeminin",
+      "description": {
+        "en": "Import your cyclefeminin cycle history into HDS",
+        "fr": "Importez votre historique de cycle cyclefeminin dans HDS"
+      },
+      "icon": {
+        "type": "emoji",
+        "value": "🌸"
+      },
+      "category": "health",
+      "provider": "cyclefeminin.net",
+      "hook": {
+        "open": {
+          "url": "https://healthdatasafe.github.io/bridge-cyclefeminin-net/",
+          "embed": true,
+          "params": {
+            "apiEndpoint": "${apiEndpoint}",
+            "return": "${returnUrl}"
+          }
+        }
+      },
+      "lastSync": {
+        "type": "pryv-stream",
+        "streamId": ".bridge-cyclefeminin.imports"
+      }
+    },
+    {
+      "id": "bridge-femm",
+      "name": "FEMM",
+      "description": {
+        "en": "Import your FEMM Health cycle history into HDS",
+        "fr": "Importez votre historique de cycle FEMM dans HDS"
+      },
+      "icon": {
+        "type": "emoji",
+        "value": "🩺"
+      },
+      "category": "health",
+      "provider": "FEMM Health",
+      "disabled": true,
+      "hook": {
+        "open": {
+          "url": "https://healthdatasafe.github.io/bridge-femm/",
+          "embed": true,
+          "params": {
+            "apiEndpoint": "${apiEndpoint}",
+            "return": "${returnUrl}"
+          }
+        }
+      },
+      "lastSync": {
+        "type": "pryv-stream",
+        "streamId": ".bridge-femm.imports"
+      }
+    }
+  ]
+}
