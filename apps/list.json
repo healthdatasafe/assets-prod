@@ -109,13 +109,55 @@
         "en": "Import your FEMM Health cycle history into HDS",
         "fr": "Importez votre historique de cycle FEMM dans HDS"
       },
+      "consentMessage": {
+        "en": "The FEMM importer reads your exported FEMM JSON file in your browser and writes cycle, fertility, symptom and medication events into your HDS account. Subsequent uploads update or remove events that have changed in the source file (incremental sync). Nothing is uploaded anywhere else.",
+        "fr": "L'importateur FEMM lit votre fichier JSON exporté depuis FEMM dans votre navigateur et écrit les événements de cycle, fertilité, symptômes et médicaments dans votre compte HDS. Les imports suivants mettent à jour ou suppriment les événements modifiés dans le fichier source (synchronisation incrémentale). Rien n'est envoyé ailleurs."
+      },
       "icon": {
         "type": "emoji",
         "value": "🩺"
       },
       "category": "health",
       "provider": "FEMM Health",
-      "disabled": true,
+      "actionButton": {
+        "label": {
+          "en": "Sync new FEMM data",
+          "fr": "Synchroniser les nouvelles données FEMM"
+        }
+      },
+      "permissions": [
+        { "streamId": "bridge-femm", "defaultName": "FEMM", "level": "manage" },
+        { "streamId": "bridge-femm-raw-new", "defaultName": "FEMM raw (new)", "level": "manage" },
+        { "streamId": "bridge-femm-raw-converted", "defaultName": "FEMM raw (converted)", "level": "manage" },
+        { "streamId": "bridge-femm-app", "defaultName": "FEMM app", "level": "manage" },
+        { "streamId": "bridge-femm-app-notes", "defaultName": "FEMM notes", "level": "manage" },
+        { "streamId": "body-vulva-bleeding", "defaultName": "Bleeding", "level": "manage" },
+        { "streamId": "body-vulva-menstrual-cup", "defaultName": "Menstrual cup", "level": "manage" },
+        { "streamId": "body-vulva-mucus-inspect", "defaultName": "Cervical fluid", "level": "manage" },
+        { "streamId": "body-temperature-basal", "defaultName": "Basal body temperature", "level": "manage" },
+        { "streamId": "fertility-cycles-start", "defaultName": "Cycle start", "level": "manage" },
+        { "streamId": "fertility-sexual-activity", "defaultName": "Sexual activity", "level": "manage" },
+        { "streamId": "fertility-test-opk", "defaultName": "Ovulation test (OPK)", "level": "manage" },
+        { "streamId": "fertility-test-pregnancy", "defaultName": "Pregnancy test", "level": "manage" },
+        { "streamId": "body-skin-acne", "defaultName": "Acne", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-bloating", "defaultName": "Bloating", "level": "manage" },
+        { "streamId": "symptom-pain-sore-breasts", "defaultName": "Sore breasts", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-constipation", "defaultName": "Constipation", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-cramps", "defaultName": "Cramps", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-cravings", "defaultName": "Food cravings", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-diarrhea", "defaultName": "Diarrhea", "level": "manage" },
+        { "streamId": "symptom-neurological-dizziness", "defaultName": "Dizziness", "level": "manage" },
+        { "streamId": "symptom-general-fatigue", "defaultName": "Fatigue", "level": "manage" },
+        { "streamId": "symptom-pain-headache", "defaultName": "Headache", "level": "manage" },
+        { "streamId": "symptom-pain-muscle", "defaultName": "Muscle / joint pain", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-nausea", "defaultName": "Nausea", "level": "manage" },
+        { "streamId": "wellbeing-mood", "defaultName": "Mood", "level": "manage" },
+        { "streamId": "symptom-cognitive-focus-difficulty", "defaultName": "Difficulty concentrating", "level": "manage" },
+        { "streamId": "symptom-sleep-insomnia", "defaultName": "Insomnia", "level": "manage" },
+        { "streamId": "medication-intake", "defaultName": "Medication intake", "level": "manage" },
+        { "streamId": "fertility-cycles-average-length", "defaultName": "Average cycle length", "level": "manage" },
+        { "streamId": "fertility-cycles-average-period", "defaultName": "Average period length", "level": "manage" }
+      ],
       "hook": {
         "open": {
           "url": "https://healthdatasafe.github.io/bridge-femm/",
@@ -128,7 +170,7 @@
       },
       "lastSync": {
         "type": "pryv-stream",
-        "streamId": ".bridge-femm.imports"
+        "streamId": "bridge-femm"
       }
     }
   ]
