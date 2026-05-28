@@ -68,6 +68,12 @@
       },
       "category": "health",
       "provider": "cyclefeminin.net",
+      "actionButton": {
+        "label": {
+          "en": "Upload new data",
+          "fr": "Importer de nouvelles données"
+        }
+      },
       "permissions": [
         { "streamId": "cyclefeminin-custom", "defaultName": "Cyclefeminin (imported)", "level": "manage" },
         { "streamId": "body-temperature-basal", "defaultName": "body-temperature-basal", "level": "manage" },
