@@ -58,12 +58,29 @@
         "en": "Import your cyclefeminin cycle history into HDS",
         "fr": "Importez votre historique de cycle cyclefeminin dans HDS"
       },
+      "consentMessage": {
+        "en": "The cyclefeminin importer will read your exported cyclefeminin JSON file in your browser and write the cycle, fertility and body-sign events into your HDS account. Nothing is uploaded anywhere else.",
+        "fr": "L'importateur cyclefeminin lit le fichier JSON exporté depuis cyclefeminin dans votre navigateur et écrit les événements de cycle, de fertilité et de signes corporels dans votre compte HDS. Rien n'est envoyé ailleurs."
+      },
       "icon": {
         "type": "emoji",
         "value": "🌸"
       },
       "category": "health",
       "provider": "cyclefeminin.net",
+      "permissions": [
+        { "streamId": "cyclefeminin-custom", "defaultName": "Cyclefeminin (imported)", "level": "manage" },
+        { "streamId": "body-temperature-basal", "defaultName": "body-temperature-basal", "level": "manage" },
+        { "streamId": "body-vulva-bleeding", "defaultName": "body-vulva-bleeding", "level": "manage" },
+        { "streamId": "body-vulva-mucus-inspect", "defaultName": "body-vulva-mucus-inspect", "level": "manage" },
+        { "streamId": "fertility-cycles-start", "defaultName": "fertility-cycles-start", "level": "manage" },
+        { "streamId": "fertility-cycles-peak-day", "defaultName": "fertility-cycles-peak-day", "level": "manage" },
+        { "streamId": "fertility-cycles-fertile-window", "defaultName": "fertility-cycles-fertile-window", "level": "manage" },
+        { "streamId": "fertility-ttc-tta", "defaultName": "fertility-ttc-tta", "level": "manage" },
+        { "streamId": "fertility-sexual-activity", "defaultName": "fertility-sexual-activity", "level": "manage" },
+        { "streamId": "symptom-gastrointestinal-cramps", "defaultName": "symptom-gastrointestinal-cramps", "level": "manage" },
+        { "streamId": "symptom-sleep-insomnia", "defaultName": "symptom-sleep-insomnia", "level": "manage" }
+      ],
       "hook": {
         "open": {
           "url": "https://healthdatasafe.github.io/bridge-cyclefeminin-net/",
