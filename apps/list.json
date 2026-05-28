@@ -63,8 +63,8 @@
         "fr": "L'importateur cyclefeminin lit le fichier JSON exporté depuis cyclefeminin dans votre navigateur et écrit les événements de cycle, de fertilité et de signes corporels dans votre compte HDS. Rien n'est envoyé ailleurs."
       },
       "icon": {
-        "type": "emoji",
-        "value": "🌸"
+        "type": "url",
+        "value": "https://cyclefeminin.net/img/logo.png"
       },
       "category": "health",
       "provider": "cyclefeminin.net",
