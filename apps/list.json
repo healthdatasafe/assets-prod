@@ -76,6 +76,11 @@
       },
       "permissions": [
         { "streamId": "cyclefeminin-custom", "defaultName": "Cyclefeminin (imported)", "level": "manage" },
+        { "streamId": "cyclefeminin-custom-mucus-notes", "defaultName": "mucus notes", "level": "manage" },
+        { "streamId": "cyclefeminin-custom-day-comments", "defaultName": "day comments", "level": "manage" },
+        { "streamId": "cyclefeminin-custom-cycle-comments", "defaultName": "cycle comments", "level": "manage" },
+        { "streamId": "cyclefeminin-custom-cycle-method", "defaultName": "cycle method", "level": "manage" },
+        { "streamId": "cyclefeminin-custom-cycle-temperature-context", "defaultName": "cycle temperature context", "level": "manage" },
         { "streamId": "body-temperature-basal", "defaultName": "body-temperature-basal", "level": "manage" },
         { "streamId": "body-vulva-bleeding", "defaultName": "body-vulva-bleeding", "level": "manage" },
         { "streamId": "body-vulva-mucus-inspect", "defaultName": "body-vulva-mucus-inspect", "level": "manage" },
@@ -89,7 +94,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://healthdatasafe.github.io/bridge-cyclefeminin-net/",
+          "url": "https://healthdatasafe.github.io/bridge-cycles-files/cyclefem",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
@@ -127,8 +132,7 @@
       },
       "permissions": [
         { "streamId": "bridge-femm", "defaultName": "FEMM", "level": "manage" },
-        { "streamId": "bridge-femm-raw-new", "defaultName": "FEMM raw (new)", "level": "manage" },
-        { "streamId": "bridge-femm-raw-converted", "defaultName": "FEMM raw (converted)", "level": "manage" },
+        { "streamId": "bridge-femm-raw-converted", "defaultName": "FEMM raw", "level": "manage" },
         { "streamId": "bridge-femm-app", "defaultName": "FEMM app", "level": "manage" },
         { "streamId": "bridge-femm-app-notes", "defaultName": "FEMM notes", "level": "manage" },
         { "streamId": "body-vulva-bleeding", "defaultName": "Bleeding", "level": "manage" },
@@ -160,7 +164,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://healthdatasafe.github.io/bridge-femm/",
+          "url": "https://healthdatasafe.github.io/bridge-cycles-files/femm",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
