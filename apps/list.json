@@ -94,7 +94,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://healthdatasafe.github.io/bridge-cycles-files/cyclefem",
+          "url": "https://bridge-cycles-files.datasafe.dev/cyclefem",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
@@ -164,7 +164,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://healthdatasafe.github.io/bridge-cycles-files/femm",
+          "url": "https://bridge-cycles-files.datasafe.dev/femm",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
