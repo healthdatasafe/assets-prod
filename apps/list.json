@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-06-01.1",
+  "version": "2026-06-01.2",
   "apps": [
     {
       "id": "bridge-mira",
@@ -175,56 +175,6 @@
       "lastSync": {
         "type": "pryv-stream",
         "streamId": "bridge-femm"
-      }
-    },
-    {
-      "id": "bridge-ryb",
-      "name": "Read Your Body",
-      "description": {
-        "en": "Import a .ryb backup from Read Your Body into HDS",
-        "fr": "Importez une sauvegarde .ryb de Read Your Body dans HDS"
-      },
-      "consentMessage": {
-        "en": "The Read Your Body importer reads your exported .ryb backup in your browser and writes cycle, fertility and note events into your HDS account. Subsequent uploads update or remove events that have changed in the source file (incremental sync). Nothing is uploaded anywhere else.",
-        "fr": "L'importateur Read Your Body lit votre sauvegarde .ryb exportée dans votre navigateur et écrit les événements de cycle, de fertilité et de notes dans votre compte HDS. Les imports suivants mettent à jour ou suppriment les événements modifiés dans le fichier source (synchronisation incrémentale). Rien n'est envoyé ailleurs."
-      },
-      "icon": {
-        "type": "url",
-        "value": "https://bridge-cycles-files.datasafe.dev/icons/ryb.svg"
-      },
-      "category": "health",
-      "provider": "Read Your Body",
-      "actionButton": {
-        "label": {
-          "en": "Sync new RYB data",
-          "fr": "Synchroniser les nouvelles données RYB"
-        }
-      },
-      "permissions": [
-        { "streamId": "bridge-ryb", "defaultName": "Read Your Body", "level": "manage" },
-        { "streamId": "bridge-ryb-raw-days", "defaultName": "RYB raw (days)", "level": "manage" },
-        { "streamId": "bridge-ryb-raw-cycles", "defaultName": "RYB raw (cycles)", "level": "manage" },
-        { "streamId": "bridge-ryb-app", "defaultName": "RYB app", "level": "manage" },
-        { "streamId": "bridge-ryb-app-notes", "defaultName": "RYB notes", "level": "manage" },
-        { "streamId": "body-temperature-basal", "defaultName": "Basal body temperature", "level": "manage" },
-        { "streamId": "fertility-sexual-activity", "defaultName": "Sexual activity", "level": "manage" },
-        { "streamId": "fertility-test-opk", "defaultName": "Ovulation test (OPK)", "level": "manage" },
-        { "streamId": "fertility-test-pregnancy", "defaultName": "Pregnancy test", "level": "manage" },
-        { "streamId": "fertility-cycles-start", "defaultName": "Cycle start", "level": "manage" }
-      ],
-      "hook": {
-        "open": {
-          "url": "https://bridge-cycles-files.datasafe.dev/ryb",
-          "embed": true,
-          "params": {
-            "apiEndpoint": "${apiEndpoint}",
-            "return": "${returnUrl}"
-          }
-        }
-      },
-      "lastSync": {
-        "type": "pryv-stream",
-        "streamId": "bridge-ryb"
       }
     }
   ]
