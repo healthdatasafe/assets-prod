@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-06-01.2",
+  "version": "2026-06-09.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -175,6 +175,60 @@
       "lastSync": {
         "type": "pryv-stream",
         "streamId": "bridge-femm"
+      }
+    },
+    {
+      "id": "bridge-ryb",
+      "name": "Read Your Body",
+      "description": {
+        "en": "Import your Read Your Body (.ryb) backup into HDS",
+        "fr": "Importez votre sauvegarde Read Your Body (.ryb) dans HDS"
+      },
+      "consentMessage": {
+        "en": "The Read Your Body importer reads your exported .ryb file (and optional photos zip) in your browser and writes cycle, fertility, bleeding, mucus, cervix-position, BBT, test, note and photo events into your HDS account. Subsequent uploads update or remove events that have changed in the source file (incremental sync). Nothing is uploaded anywhere else.",
+        "fr": "L'importateur Read Your Body lit votre fichier .ryb exporté (et l'archive photos optionnelle) dans votre navigateur et écrit les événements de cycle, fertilité, saignement, glaire, position du col, température basale, tests, notes et photos dans votre compte HDS. Les imports suivants mettent à jour ou suppriment les événements modifiés dans le fichier source (synchronisation incrémentale). Rien n'est envoyé ailleurs."
+      },
+      "icon": {
+        "type": "url",
+        "value": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23d4c4e0%22/%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%233e1f5a%22%3ERYB%3C/text%3E%0A%3C/svg%3E"
+      },
+      "category": "health",
+      "provider": "Read Your Body",
+      "actionButton": {
+        "label": {
+          "en": "Sync new RYB data",
+          "fr": "Synchroniser les nouvelles données RYB"
+        }
+      },
+      "permissions": [
+        { "streamId": "app-read-your-body", "defaultName": "Read Your Body", "level": "manage" },
+        { "streamId": "app-read-your-body-raw-days", "defaultName": "RYB raw (days)", "level": "manage" },
+        { "streamId": "app-read-your-body-raw-cycles", "defaultName": "RYB raw (cycles)", "level": "manage" },
+        { "streamId": "app-read-your-body-app", "defaultName": "RYB app", "level": "manage" },
+        { "streamId": "app-read-your-body-app-notes", "defaultName": "RYB notes", "level": "manage" },
+        { "streamId": "app-read-your-body-photos", "defaultName": "RYB photos", "level": "manage" },
+        { "streamId": "body-temperature-basal", "defaultName": "Basal body temperature", "level": "manage" },
+        { "streamId": "body-vulva-bleeding", "defaultName": "Bleeding", "level": "manage" },
+        { "streamId": "body-vulva-mucus-inspect", "defaultName": "Cervical fluid", "level": "manage" },
+        { "streamId": "body-vulva-cervix-position", "defaultName": "Cervical position", "level": "manage" },
+        { "streamId": "fertility-sexual-activity", "defaultName": "Sexual activity", "level": "manage" },
+        { "streamId": "fertility-test-opk", "defaultName": "Ovulation test (OPK)", "level": "manage" },
+        { "streamId": "fertility-test-pregnancy", "defaultName": "Pregnancy test", "level": "manage" },
+        { "streamId": "fertility-cycles-start", "defaultName": "Cycle start", "level": "manage" }
+      ],
+      "hook": {
+        "open": {
+          "url": "https://bridge-cycles-files.datasafe.dev/ryb",
+          "embed": true,
+          "params": {
+            "apiEndpoint": "${apiEndpoint}",
+            "return": "${returnUrl}"
+          }
+        }
+      },
+      "lastSync": {
+        "type": "pryv-stream",
+        "streamId": "app-read-your-body"
       }
     }
   ]
