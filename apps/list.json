@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-06-09.1",
+  "version": "2026-06-11.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -229,6 +229,28 @@
       "lastSync": {
         "type": "pryv-stream",
         "streamId": "app-read-your-body"
+      }
+    },
+    {
+      "id": "bridge-healthkit",
+      "name": "Apple Health",
+      "description": {
+        "en": "Import your cycle data, weight and height from Apple Health on your iPhone",
+        "fr": "Importez vos données de cycle, poids et taille depuis Apple Santé sur votre iPhone"
+      },
+      "icon": {
+        "type": "emoji",
+        "value": "❤️"
+      },
+      "category": "health",
+      "provider": "Apple Inc.",
+      "localConnector": "healthkit",
+      "requiresCapability": "healthKit",
+      "hook": {
+        "open": {
+          "url": "",
+          "embed": false
+        }
       }
     }
   ]
