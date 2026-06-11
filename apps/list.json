@@ -18,7 +18,7 @@
       "hook": {
         "initiate": {
           "method": "POST",
-          "url": "https://bridge-mira.datasafe.dev/mira/initiate",
+          "url": "https://bridge-mira.hds.ngo/mira/initiate",
           "auth": "ApiEndpoint ${apiEndpoint}",
           "body": {
             "returnUrl": "${returnUrl}"
@@ -32,7 +32,7 @@
         "resync": {
           "initiate": {
             "method": "POST",
-            "url": "https://bridge-mira.datasafe.dev/mira/resync",
+            "url": "https://bridge-mira.hds.ngo/mira/resync",
             "auth": "ApiEndpoint ${apiEndpoint}"
           },
           "url": "${openUrl}",
@@ -40,13 +40,13 @@
         },
         "disconnect": {
           "method": "POST",
-          "url": "https://bridge-mira.datasafe.dev/mira/revoke",
+          "url": "https://bridge-mira.hds.ngo/mira/revoke",
           "auth": "ApiEndpoint ${apiEndpoint}"
         }
       },
       "lastSync": {
         "type": "api",
-        "url": "https://bridge-mira.datasafe.dev/mira/lastSync",
+        "url": "https://bridge-mira.hds.ngo/mira/lastSync",
         "auth": "ApiEndpoint ${apiEndpoint}",
         "field": "lastSyncedAt"
       }
@@ -94,7 +94,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://bridge-cycles-files.datasafe.dev/cyclefem",
+          "url": "https://bridge-cycles-files.hds.ngo/cyclefem",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
@@ -164,7 +164,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://bridge-cycles-files.datasafe.dev/femm",
+          "url": "https://bridge-cycles-files.hds.ngo/femm",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
@@ -218,7 +218,7 @@
       ],
       "hook": {
         "open": {
-          "url": "https://bridge-cycles-files.datasafe.dev/ryb",
+          "url": "https://bridge-cycles-files.hds.ngo/ryb",
           "embed": true,
           "params": {
             "apiEndpoint": "${apiEndpoint}",
