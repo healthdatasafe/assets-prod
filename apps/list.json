@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-08-28.1",
+  "version": "2026-09-09.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -49,6 +49,77 @@
         "url": "https://bridge-mira.hds.ngo/mira/lastSync",
         "auth": "ApiEndpoint ${apiEndpoint}",
         "field": "lastSyncedAt"
+      }
+    },
+    {
+      "id": "bridge-tempdrop",
+      "name": "Tempdrop",
+      "description": {
+        "en": "Basal body temperature from your Tempdrop sensor",
+        "fr": "Température basale de votre capteur Tempdrop"
+      },
+      "consentMessage": {
+        "en": "Connect your Tempdrop account: the bridge fetches your basal body temperature readings (the last 6 months, then every day) and writes them into your HDS account. Only temperature readings are transferred. You can disconnect at any time; readings already synced stay in your account.",
+        "fr": "Connectez votre compte Tempdrop : la passerelle récupère vos mesures de température basale (les 6 derniers mois, puis chaque jour) et les écrit dans votre compte HDS. Seules les températures sont transférées. Vous pouvez vous déconnecter à tout moment ; les mesures déjà synchronisées restent dans votre compte."
+      },
+      "icon": {
+        "type": "base64",
+        "value": "data:image/png;base64,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"
+      },
+      "category": "health",
+      "provider": "Tempdrop",
+      "permissions": [
+        {
+          "streamId": "bridge-tempdrop",
+          "defaultName": "Tempdrop",
+          "level": "manage"
+        },
+        {
+          "streamId": "body-temperature-basal",
+          "defaultName": "Basal body temperature",
+          "level": "manage"
+        }
+      ],
+      "hook": {
+        "initiate": {
+          "method": "POST",
+          "url": "https://bridge-tempdrop.hds.ngo/tempdrop/initiate",
+          "auth": "ApiEndpoint ${apiEndpoint}",
+          "body": {
+            "returnUrl": "${returnUrl}"
+          },
+          "openUrlField": "openUrl"
+        },
+        "open": {
+          "url": "${openUrl}",
+          "embed": false
+        },
+        "resync": {
+          "initiate": {
+            "method": "POST",
+            "url": "https://bridge-tempdrop.hds.ngo/tempdrop/resync",
+            "auth": "ApiEndpoint ${apiEndpoint}",
+            "body": {
+              "returnUrl": "${returnUrl}"
+            },
+            "openUrlField": "openUrl"
+          },
+          "url": "${openUrl}",
+          "embed": false
+        },
+        "disconnect": {
+          "method": "POST",
+          "url": "https://bridge-tempdrop.hds.ngo/tempdrop/revoke",
+          "auth": "ApiEndpoint ${apiEndpoint}"
+        }
+      },
+      "lastSync": {
+        "type": "api",
+        "url": "https://bridge-tempdrop.hds.ngo/tempdrop/lastSync",
+        "auth": "ApiEndpoint ${apiEndpoint}",
+        "field": "lastSyncedAt",
+        "needsReauthField": "needsReauth",
+        "faultyField": "faulty"
       }
     },
     {
