@@ -50,7 +50,8 @@
         "auth": "ApiEndpoint ${apiEndpoint}",
         "field": "lastSyncedAt",
         "needsReauthField": "needsReauth",
-        "faultyField": "faulty"
+        "faultyField": "faulty",
+        "connectedField": "connected"
       }
     },
     {
@@ -121,7 +122,8 @@
         "auth": "ApiEndpoint ${apiEndpoint}",
         "field": "lastSyncedAt",
         "needsReauthField": "needsReauth",
-        "faultyField": "faulty"
+        "faultyField": "faulty",
+        "connectedField": "connected"
       }
     },
     {
