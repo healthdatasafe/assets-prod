@@ -48,7 +48,9 @@
         "type": "api",
         "url": "https://bridge-mira.hds.ngo/mira/lastSync",
         "auth": "ApiEndpoint ${apiEndpoint}",
-        "field": "lastSyncedAt"
+        "field": "lastSyncedAt",
+        "needsReauthField": "needsReauth",
+        "faultyField": "faulty"
       }
     },
     {
