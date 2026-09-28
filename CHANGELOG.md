@@ -4,6 +4,14 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## 2026-09-28.1
+
+- `apps/list.json`: **bridge-femm and bridge-ryb icons** are now 128px PNG base64 data URIs
+  (`type: "base64"`), rasterized from their previous SVG tiles, which were `type: "url"` SVG data URLs.
+  app-web-user-account (upstream v0.5.0+, deployed 2026-09-25) accepts only absolute http(s) `url` icons
+  and raster `base64` images (SVG is script-capable), so both apps showed no icon on the consent screen.
+  (`_plans/BUGS.md` B-2026-09-25-4)
+
 ## 2026-06-12.1
 
 - `apps/list.json`: **bridge-healthkit icon** — replaced the ❤️ emoji placeholder
