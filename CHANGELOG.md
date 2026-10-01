@@ -4,6 +4,12 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## 2026-10-01.1
+
+- `apps/list.json`: **bridge-mira `resync.initiate` now sends `{returnUrl}`** (and declares
+  `openUrlField`), as assets-demo does. Without the body, the bridge's `/mira/resync` answered 400
+  `Invalid or missing returnUrl`, so "Reconnect Mira" failed in prod.
+
 ## 2026-09-28.1
 
 - `apps/list.json`: **bridge-femm and bridge-ryb icons** are now 128px PNG base64 data URIs

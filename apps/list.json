@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-09-28.1",
+  "version": "2026-10-01.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -33,7 +33,11 @@
           "initiate": {
             "method": "POST",
             "url": "https://bridge-mira.hds.ngo/mira/resync",
-            "auth": "ApiEndpoint ${apiEndpoint}"
+            "auth": "ApiEndpoint ${apiEndpoint}",
+            "body": {
+              "returnUrl": "${returnUrl}"
+            },
+            "openUrlField": "openUrl"
           },
           "url": "${openUrl}",
           "embed": false
