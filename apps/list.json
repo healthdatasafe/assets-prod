@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-03.1",
+  "version": "2026-10-03.2",
   "returnOrigins": [
     "https://app.hds.ngo"
   ],
   "apps": [
     {
       "id": "bridge-mira",
+      "statusStreamId": "sync-status-mira",
       "name": "Mira",
       "description": {
         "en": "Fertility Tracker",
@@ -63,6 +64,7 @@
     },
     {
       "id": "bridge-tempdrop",
+      "statusStreamId": "sync-status-tempdrop",
       "name": "Tempdrop",
       "description": {
         "en": "Basal body temperature from your Tempdrop sensor",
@@ -135,6 +137,7 @@
     },
     {
       "id": "bridge-cyclefeminin",
+      "statusStreamId": "sync-status-cyclefeminin",
       "name": "cyclefeminin",
       "description": {
         "en": "Import your cyclefeminin cycle history into HDS",
@@ -255,6 +258,7 @@
     },
     {
       "id": "bridge-femm",
+      "statusStreamId": "sync-status-femm",
       "name": "FEMM",
       "description": {
         "en": "Import your FEMM Health cycle history into HDS",
@@ -445,6 +449,7 @@
     },
     {
       "id": "bridge-ryb",
+      "statusStreamId": "sync-status-ryb",
       "name": "Read Your Body",
       "description": {
         "en": "Import your Read Your Body (.ryb) backup into HDS",
@@ -555,6 +560,7 @@
     },
     {
       "id": "bridge-healthkit",
+      "statusStreamId": "sync-status-healthkit",
       "name": "Apple Health",
       "description": {
         "en": "Import your cycle data, weight and height from Apple Health on your iPhone",
