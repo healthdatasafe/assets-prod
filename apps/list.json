@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-03.3",
+  "version": "2026-10-03.4",
   "apps": [
     {
       "id": "bridge-mira",
@@ -87,6 +87,11 @@
           "streamId": "body-temperature-basal",
           "defaultName": "Basal body temperature",
           "level": "manage"
+        },
+        {
+          "streamId": "sync-status-tempdrop",
+          "defaultName": "Tempdrop connection status",
+          "level": "contribute"
         }
       ],
       "hook": {
