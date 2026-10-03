@@ -1,6 +1,9 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-01.1",
+  "version": "2026-10-03.1",
+  "returnOrigins": [
+    "https://app.hds.ngo"
+  ],
   "apps": [
     {
       "id": "bridge-mira",
