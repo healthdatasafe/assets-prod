@@ -4,6 +4,20 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## 2026-10-28.1
+
+- `apps/list.json` **bridge-cyclefeminin and bridge-femm grant the streams bridge-cycles-files
+  writes**: `app-cyclefeminin` + its 5 sub-streams (was `cyclefeminin-custom*`), `app-femm` + its 3
+  sub-streams (was `bridge-femm*`). Without them the importer stops at "Preview changes" with `Stream
+  provisioning failed … app-cyclefeminin`. Item grants aligned too: Cyclefeminin `symptom-pain-pelvic`
+  replaces `symptom-gastrointestinal-cramps`; FEMM no longer asks for `fertility-cycles-average-length` /
+  `-period`, which it does not write. `lastSync.streamId` follows the base streams. Same change as
+  assets-demo 2026-10-28.1. (`_plans/BUGS.md` B-2026-10-26-5)
+- `apps/list.json` connector entries may carry **`deviceName`** (the device the connector reads, used
+  to label the values it writes) and **`deviceItems`** (item keys the device measures; absent means
+  every value the connector writes). bridge-tempdrop: `Tempdrop`; bridge-mira: `Mira`, the five
+  urine-hormone items.
+
 ## 2026-10-01.1
 
 - `apps/list.json`: **bridge-mira `resync.initiate` now sends `{returnUrl}`** (and declares
