@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-03.4",
+  "version": "2026-10-28.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -16,6 +16,14 @@
       },
       "category": "medical",
       "provider": "Quanovate Inc.",
+      "deviceName": "Mira",
+      "deviceItems": [
+        "body-urine-hormones-lh",
+        "body-urine-hormones-e3g",
+        "body-urine-hormones-pdg",
+        "body-urine-hormones-fsh",
+        "body-urine-hormones-hcg"
+      ],
       "hook": {
         "initiate": {
           "method": "POST",
@@ -77,6 +85,7 @@
       },
       "category": "health",
       "provider": "Tempdrop",
+      "deviceName": "Tempdrop",
       "permissions": [
         {
           "streamId": "bridge-tempdrop",
@@ -163,32 +172,32 @@
       },
       "permissions": [
         {
-          "streamId": "cyclefeminin-custom",
+          "streamId": "app-cyclefeminin",
           "defaultName": "Cyclefeminin (imported)",
           "level": "manage"
         },
         {
-          "streamId": "cyclefeminin-custom-mucus-notes",
+          "streamId": "app-cyclefeminin-mucus-notes",
           "defaultName": "mucus notes",
           "level": "manage"
         },
         {
-          "streamId": "cyclefeminin-custom-day-comments",
+          "streamId": "app-cyclefeminin-day-comments",
           "defaultName": "day comments",
           "level": "manage"
         },
         {
-          "streamId": "cyclefeminin-custom-cycle-comments",
+          "streamId": "app-cyclefeminin-cycle-comments",
           "defaultName": "cycle comments",
           "level": "manage"
         },
         {
-          "streamId": "cyclefeminin-custom-cycle-method",
+          "streamId": "app-cyclefeminin-cycle-method",
           "defaultName": "cycle method",
           "level": "manage"
         },
         {
-          "streamId": "cyclefeminin-custom-cycle-temperature-context",
+          "streamId": "app-cyclefeminin-cycle-temperature-context",
           "defaultName": "cycle temperature context",
           "level": "manage"
         },
@@ -233,8 +242,8 @@
           "level": "manage"
         },
         {
-          "streamId": "symptom-gastrointestinal-cramps",
-          "defaultName": "symptom-gastrointestinal-cramps",
+          "streamId": "symptom-pain-pelvic",
+          "defaultName": "symptom-pain-pelvic",
           "level": "manage"
         },
         {
@@ -255,7 +264,7 @@
       },
       "lastSync": {
         "type": "pryv-stream",
-        "streamId": ".bridge-cyclefeminin.imports"
+        "streamId": "app-cyclefeminin"
       }
     },
     {
@@ -284,22 +293,22 @@
       },
       "permissions": [
         {
-          "streamId": "bridge-femm",
+          "streamId": "app-femm",
           "defaultName": "FEMM",
           "level": "manage"
         },
         {
-          "streamId": "bridge-femm-raw-converted",
+          "streamId": "app-femm-raw-converted",
           "defaultName": "FEMM raw",
           "level": "manage"
         },
         {
-          "streamId": "bridge-femm-app",
+          "streamId": "app-femm-app",
           "defaultName": "FEMM app",
           "level": "manage"
         },
         {
-          "streamId": "bridge-femm-app-notes",
+          "streamId": "app-femm-app-notes",
           "defaultName": "FEMM notes",
           "level": "manage"
         },
@@ -422,16 +431,6 @@
           "streamId": "medication-intake",
           "defaultName": "Medication intake",
           "level": "manage"
-        },
-        {
-          "streamId": "fertility-cycles-average-length",
-          "defaultName": "Average cycle length",
-          "level": "manage"
-        },
-        {
-          "streamId": "fertility-cycles-average-period",
-          "defaultName": "Average period length",
-          "level": "manage"
         }
       ],
       "hook": {
@@ -446,7 +445,7 @@
       },
       "lastSync": {
         "type": "pryv-stream",
-        "streamId": "bridge-femm"
+        "streamId": "app-femm"
       }
     },
     {
