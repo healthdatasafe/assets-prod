@@ -4,6 +4,18 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## 2026-11-05.1
+
+- `apps/list.json` gains **`partnerApps`** (data-model APP-DESCRIPTION.md), the same three entries as assets-demo
+  2026-11-05.1, each vouching for its implementer's manifest:
+  - `cycle-intelligence` (`grant: access`), with `manifest` (its `hds-app-manifest.json`) and Open links;
+  - `cycle-intelligence-monitor` (the practitioner app, `grant: access`), no `urls`, so it vouches on the
+    practitioner's consent screen and Connected apps without appearing in a patient's Partner apps;
+  - `dysnet-registry` (`grant: cmc`), `manifest` `registry.dysnet.org/publisher/hds-app.json`, `counterparty`
+    `{ username: dysnet-registry, host: api.datasafe.dev }` (the account its invites come from, so only that
+    account's relationships show as DysNet), Open links to `registry.dysnet.org`, `embedFrom` `https://app.hds.ngo`
+    (allowed by its `frame-ancestors`).
+
 ## 2026-10-28.1
 
 - `apps/list.json` **bridge-cyclefeminin and bridge-femm grant the streams bridge-cycles-files
