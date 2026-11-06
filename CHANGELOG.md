@@ -4,6 +4,12 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## 2026-11-06.1
+
+- `apps/list.json` new `partnerApps` entry **`app-hds-support`**, the same as assets-demo 2026-11-06.1: the support
+  console (`grant: access`) is named "HDS Support Console" on the account app's sign-in and consent screens, with no
+  `urls`, so it never shows in a patient's Partner apps. (`_plans/BUGS.md` B-2026-11-02-17)
+
 ## 2026-11-05.1
 
 - `apps/list.json` gains **`partnerApps`** (data-model APP-DESCRIPTION.md), the same three entries as assets-demo

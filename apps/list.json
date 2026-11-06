@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-11-05.1",
+  "version": "2026-11-06.1",
   "apps": [
     {
       "id": "bridge-mira",
@@ -651,6 +651,17 @@
       "embedFrom": [
         "https://app.hds.ngo"
       ]
+    },
+    {
+      "id": "app-hds-support",
+      "appCode": "app-hds-support",
+      "grant": "access",
+      "name": "HDS Support Console",
+      "description": {
+        "en": "For Health Data Safe staff: the team console for support conversations.",
+        "fr": "Pour l’équipe Health Data Safe : la console des conversations d’assistance."
+      },
+      "provider": "Health Data Safe"
     }
   ]
 }
