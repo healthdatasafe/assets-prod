@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "id": "hds-brands",
   "type": "collection",
-  "timestamp": "2026-11-05T00:00:00Z",
+  "timestamp": "2026-11-08T00:00:00Z",
   "entry": [
     {
       "fullUrl": "https://healthdatasafe.github.io/assets-prod/smart/Organization/hds",
