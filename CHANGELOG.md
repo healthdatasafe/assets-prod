@@ -4,6 +4,12 @@ Assets served at `https://healthdatasafe.github.io/assets-prod/` (GitHub Pages f
 referenced by `hds.ngo` service-info → `assets.definitions`. The `version` field in
 `apps/list.json` is the cache-buster consumers key on.
 
+## Unreleased
+
+- New `smart/brands.json`: SMART App Launch 2.2.0 User-access Brand Bundle for Health Data Safe, one brand with the
+  Switzerland and USA FHIR R4 endpoints (`https://auth-{ch,us}.api.datasafe.dev/adapter/fhir/r4`), portal
+  `https://account.hds.ngo`. Not referenced from `index.json`; `apps/list.json` unchanged.
+
 ## 2026-11-06.1
 
 - `apps/list.json` new `partnerApps` entry **`app-hds-support`**, the same as assets-demo 2026-11-06.1: the support
