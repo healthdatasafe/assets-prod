@@ -10,6 +10,12 @@ referenced by `hds.ngo` service-info → `assets.definitions`. The `version` fie
   Switzerland and USA FHIR R4 endpoints (`https://auth-{ch,us}.api.datasafe.dev/adapter/fhir/r4`), portal
   `https://account.hds.ngo`. Not referenced from `index.json`; `apps/list.json` unchanged.
 
+## 2026-11-12.1
+
+- `apps/list.json` drops the **`cycle-intelligence`** and **`cycle-intelligence-monitor`** `partnerApps` entries
+  (added in 2026-11-05.1): Cycle Intelligence is offered on demo only (perki, 2026-11-12). Prod's Partner apps no
+  longer list it, and its consent screens no longer name it as vouched for. assets-demo keeps both entries.
+
 ## 2026-11-06.1
 
 - `apps/list.json` new `partnerApps` entry **`app-hds-support`**, the same as assets-demo 2026-11-06.1: the support
