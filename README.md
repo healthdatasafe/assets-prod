@@ -39,3 +39,8 @@ The file [`index.json`](index.json) is exposed via the [Service Information](htt
 3. Verify the change at <https://healthdatasafe.github.io/assets-prod/index.json> after build (~1 minute).
 
 Service-info caches mean clients may see the old version for several minutes after a content change. Verify with a fresh browser session or `curl --no-keepalive`.
+
+
+## License
+
+Health Data Safe material: proprietary, all rights reserved, published to be served (see [LICENSE](LICENSE)). Pryv-derived files: see [NOTICE](NOTICE).

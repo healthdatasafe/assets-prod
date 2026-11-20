@@ -1,0 +1,47 @@
+files:
+  package.json:
+    json:
+      force:
+        author: "{AUTHOR_NAME} ({AUTHOR_WEB})"
+        license: "{SPDX}"
+    siblingLicenseFile:
+      name: LICENSE
+
+  README.md:
+    siblingLicenseFile:
+      name: LICENSE
+    footer:
+      startBlock: "\n\n## License\n\n"
+      linePrefix: ""
+      endBlock: ""
+      license: "{README_LICENSE}"
+
+ignore:
+- .git
+- node_modules
+- dist
+- distprod
+- docs
+
+license: |
+  Copyright (c) {YEARS}, {AUTHOR_NAME} ({AUTHOR_WEB})
+  All rights reserved.
+
+  This repository is public so that the Health Data Safe service it holds can
+  be served to its users and clients. Publication grants no licence. You may
+  load and use this material as served, to use or interoperate with Health
+  Data Safe. No other right to use, copy, modify, merge, publish, distribute,
+  sublicense or sell it, in whole or in part, is granted without the prior
+  written permission of Health Data Safe.
+
+  Third-party components included in this material remain under their own
+  licences (see NOTICE where present).
+
+substitutions:
+  YEARS:
+    start: 2026
+    end: CURRENT_YEAR
+  AUTHOR_NAME: Health Data Safe
+  AUTHOR_WEB: https://www.healthdatasafe.org
+  SPDX: UNLICENSED
+  README_LICENSE: "Health Data Safe material: proprietary, all rights reserved, published to be served (see [LICENSE](LICENSE)). Pryv-derived files: see [NOTICE](NOTICE)."

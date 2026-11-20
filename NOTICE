@@ -1,0 +1,11 @@
+assets-prod: notices
+
+Health Data Safe's own material in this repository (its logos, `apps/`, `smart/`, and its changes to the other files)
+is proprietary, all rights reserved (see LICENSE). Clients may fetch and use it as served, to use or interoperate
+with Health Data Safe.
+
+Pryv material
+
+This repository started as a mirror of healthdatasafe/assets-demo, a fork of https://github.com/pryv/assets-open-pryv.io
+(© Pryv). The structure of `index.json`, `default.css` and the `lib-js/` sign-in button files come from it and remain
+under Pryv's terms.
