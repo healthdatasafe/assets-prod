@@ -43,4 +43,4 @@ Service-info caches mean clients may see the old version for several minutes aft
 
 ## License
 
-Health Data Safe material: proprietary, all rights reserved, published to be served (see [LICENSE](LICENSE)). Pryv-derived files: see [NOTICE](NOTICE).
+Health Data Safe material: proprietary, all rights reserved; served to be used as is, and you may inspect it (see [LICENSE](LICENSE)). Pryv-derived files: see [NOTICE](NOTICE).
