@@ -3,13 +3,159 @@
     "en": "..."
   },
   "ERROR": {
-    "en": "Error"
+    "en": "Error",
+    "fr": "Erreur",
+    "de": "Fehler",
+    "es": "Error",
+    "it": "Errore",
+    "pt-BR": "Erro"
   },
   "LOGIN": {
-    "en": "Login"
+    "en": "Sign in",
+    "fr": "Se connecter",
+    "de": "Anmelden",
+    "es": "Iniciar sesión",
+    "it": "Accedi",
+    "pt-BR": "Entrar"
   },
   "LOGOUT_CONFIRM": {
     "en": "Logout ?",
     "fr": "Se Deconnecter ?"
+  },
+  "SIGNOUT_CONFIRM": {
+    "en": "Log out?",
+    "fr": "Se déconnecter ?",
+    "de": "Abmelden?",
+    "es": "¿Cerrar sesión?",
+    "it": "Uscire?",
+    "pt-BR": "Sair?"
+  },
+  "MENU_TITLE": {
+    "en": "Account",
+    "fr": "Compte",
+    "de": "Konto",
+    "es": "Cuenta",
+    "it": "Account",
+    "pt-BR": "Conta"
+  },
+  "LOGOUT": {
+    "en": "Log out",
+    "fr": "Se déconnecter",
+    "de": "Abmelden",
+    "es": "Cerrar sesión",
+    "it": "Esci",
+    "pt-BR": "Sair"
+  },
+  "MANAGE_ACCOUNT": {
+    "en": "Manage my account",
+    "fr": "Gérer mon compte",
+    "de": "Mein Konto verwalten",
+    "es": "Gestionar mi cuenta",
+    "it": "Gestisci il mio account",
+    "pt-BR": "Gerenciar minha conta"
+  },
+  "APP": {
+    "en": "app",
+    "fr": "app",
+    "de": "App",
+    "es": "app",
+    "it": "app",
+    "pt-BR": "app"
+  },
+  "CLOSE": {
+    "en": "Close",
+    "fr": "Fermer",
+    "de": "Schließen",
+    "es": "Cerrar",
+    "it": "Chiudi",
+    "pt-BR": "Fechar"
+  },
+  "CANCEL": {
+    "en": "Cancel",
+    "fr": "Annuler",
+    "de": "Abbrechen",
+    "es": "Cancelar",
+    "it": "Annulla",
+    "pt-BR": "Cancelar"
+  },
+  "LOGOUT_ALL": {
+    "en": "Log out of all accounts",
+    "fr": "Se déconnecter de tous les comptes",
+    "de": "Von allen Konten abmelden",
+    "es": "Cerrar sesión en todas las cuentas",
+    "it": "Esci da tutti gli account",
+    "pt-BR": "Sair de todas as contas"
+  },
+  "MANAGE_ACCOUNT_OF": {
+    "en": "Manage {username}'s account",
+    "fr": "Gérer le compte de {username}",
+    "de": "Konto von {username} verwalten",
+    "es": "Gestionar la cuenta de {username}",
+    "it": "Gestisci l'account di {username}",
+    "pt-BR": "Gerenciar a conta de {username}"
+  },
+  "USE_FOR": {
+    "en": "Use this app for",
+    "fr": "Utiliser cette app pour",
+    "de": "Diese App verwenden für",
+    "es": "Usar esta app para",
+    "it": "Usa questa app per",
+    "pt-BR": "Usar este app para"
+  },
+  "ME": {
+    "en": "me",
+    "fr": "moi",
+    "de": "ich",
+    "es": "yo",
+    "it": "io",
+    "pt-BR": "eu"
+  },
+  "VIA": {
+    "en": "via",
+    "fr": "via",
+    "de": "über",
+    "es": "vía",
+    "it": "tramite",
+    "pt-BR": "via"
+  },
+  "ACTING_AS": {
+    "en": "acting as",
+    "fr": "pour le compte",
+    "de": "im Auftrag",
+    "es": "en nombre de",
+    "it": "per conto di",
+    "pt-BR": "em nome de"
+  },
+  "SWITCH_BACK": {
+    "en": "Switch back to {username}",
+    "fr": "Revenir à {username}",
+    "de": "Zurück zu {username}",
+    "es": "Volver a {username}",
+    "it": "Torna a {username}",
+    "pt-BR": "Voltar para {username}"
+  },
+  "SWITCHING": {
+    "en": "Switching...",
+    "fr": "Changement...",
+    "de": "Wechsel...",
+    "es": "Cambiando...",
+    "it": "Cambio in corso...",
+    "pt-BR": "Trocando..."
+  },
+  "OTHER_ACCOUNT": {
+    "en": "Another account...",
+    "fr": "Un autre compte...",
+    "de": "Anderes Konto...",
+    "es": "Otra cuenta...",
+    "it": "Un altro account...",
+    "pt-BR": "Outra conta..."
+  },
+  "UNAVAILABLE": {
+    "en": "no longer available",
+    "fr": "plus disponible",
+    "de": "nicht mehr verfügbar",
+    "es": "ya no disponible",
+    "it": "non più disponibile",
+    "pt-BR": "não está mais disponível"
   }
 }
